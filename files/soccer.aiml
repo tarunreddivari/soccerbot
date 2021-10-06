@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+    <category>
+        <pattern>WHAT DID YOU SAY</pattern>
+        <template>I said <response/></template>
+    </category>
+    
+    
+    <category>
+        <pattern>WHAT IS THE TOPIC</pattern>
+        <template>We are talking about <topicstar/></template>
+    </category>
+    
+    
+    <category>
+        <pattern>TALK TO *</pattern>
+        <template>I have asked to talk to <person2/></template>
+    </category>
+    
+    <category>
+        <pattern>TEST *</pattern>
+        <template><gender><star/></gender></template>
+    </category>
+    
+    
+    <category>
+        <pattern>WHAT IS THE DATE TODAY</pattern>
+        <template>it is <date/></template>
+    </category>
+    
+    <category>
+        <pattern>I AM BORED</pattern>
+        <template>
+            You can watch manchester UNited vs Wolves highlights
+            <card>
+                <image>https://www.youtube.com/watch?v=qMYtC_n5K6k</image>
+                <title>Grenwood</title>
+                <subtitle>Talk to me</subtitle>
+                <button>
+                    <text>Click here! </text>
+                    <url>mason greenwood.com</url>
+                </button>
+            </card>
+        </template>
+    </category>
+
+ 
+
+    <category>
+        <pattern>WHAT DO YOU LOOK LIKE</pattern>
+        <template>
+            I look like this.
+            <image>https://pbs.twimg.com/media/EshcQIGXEAAILp-.jpg:large</image>
+        </template>
+    </category>
+    
+    <category>
+    <pattern>COUNT TO 10</pattern>
+        <template>1, 2, 3, 4, 5, 6, 7, 8, 9, 10</template>
+    </category>
+    
+    <category>
+        <pattern>WHAT DO YOU LOOK LIKE?</pattern>
+        <template>
+            I look like this.
+            <video>https://compote.slate.com/images/697b023b-64a5-49a0-8059-27b963453fb1.gif</video>
+        </template>
+    </category>    
+    
+  <category>
+    <pattern>MY NAME IS *</pattern>
+    <template>
+        Hi <set name="firtname"><star/></set> 
+        <condition name="firtname">
+            <li value="Tarun">You have the same name as my creator!</li>
+            <li value="Greenwood">Mason Greenwood?</li>
+        </condition>
+        </template>
+  </category>
+    
+    
+  <category>
+    <pattern>*</pattern>
+    <template>I have no answer for that.</template>
+  </category>
+
+ 
+
+  <category>
+    <pattern>Want to talk about the different teams?</pattern>
+    <template>Sure i like talking about them.
+    <think><set> name="topic">TEAMS</set></think>
+    </template>
+  </category>
+
+ 
+
+
+#set topics 
+<topic name="TEAMS"/>
+    <category>
+    <pattern>What is your favourite?</pattern>
+    <templete>I like Manchester United because my dad goes for them></templete>
+    </category>
+
+ 
+
+
+    <category>
+    <pattern>HI</pattern>
+        <template>
+            <random>
+                <li>Hello</li>
+                <li>Hi There</li>
+                <li>G'day</li>
+                <li>Hey</li>
+            </random>
+        </template>
+    </category>
